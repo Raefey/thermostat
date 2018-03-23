@@ -2,6 +2,13 @@ $( document ).ready(function() {
 
   var thermostat = new Thermostat();
 
+  $.get( "http://localhost:4567/data" , function(data){
+    var temperature = data.temperature;
+    var powersave = data.powersave;
+    var city = data.city;
+    console.log(temperature)
+  });
+
   $( "#temperature-up" ).click(function() {
     thermostat.up();
     updateTemperatureDisplay();
