@@ -9,15 +9,26 @@
         font-size: 150px;
         text-align: center;
       }
+      * {
+        font-family: 'Orbitron', sans-serif;
+      }
       #allButtons {
         position: relative;
         text-align: center;
       }
+      .button {
+        background-color: #22559C;
+        padding: 30px 30px;
+        border: none;
+        font-size: 25px;
+        color: #EDE862;
+      }
       .switch {
         position: relative;
         display: inline-block;
-        width: 60px;
-        height: 34px;
+        width: 34px;
+        height: 60px;
+        top: -23px;
       }
 
       .slider {
@@ -51,9 +62,9 @@
       }
 
       input:checked + .slider:before {
-         -webkit-transform: translateX(26px);
-         -ms-transform: translateX(26px);
-         transform: translateX(26px);
+         -webkit-transform: translateY(-26px);
+         -ms-transform: translateY(-26px);
+         transform: translateY(-26px);
       }
 
       .slider.round {
@@ -65,28 +76,34 @@
       }
     </style>
   </head>
-  <body>
+  <body bgcolor="#F27370">
     <section>
       <script src="../src/thermostat.js"></script>
       <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
       <script src="../src/interface.js"></script>
-      <script> $.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&', function(data){
-        console.log(data);
-      })
-      </script>
       <h1 id="temperature">20 °C</h1>
       <div id='allButtons'>
       <p>
-        <button id="temperature-up">+</button>
-        <button id="temperature-down">-</button>
-        <button id="temperature-reset">reset</button>
+        <button class='button' id="temperature-up">+</button>
+        <button class='button' id="temperature-down">-</button>
+        <button class='button' id="temperature-reset">Reset</button>
         <label class="switch">
           <input id="PSMswitch"type="checkbox" checked>
           <span class="slider round"></span>
         </label>
         <div id='PSM'>
         Powersaving: On
-      </div>
+        </div>
+
+        <div>
+          <br>
+           <button class='button' id="get-weather">Weather</button>
+        </div>
+        <br>
+        <br>
+        <div id="weather-info">
+        </div>
+
       </p>
     </div>
     </section>

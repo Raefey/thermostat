@@ -33,6 +33,9 @@ Thermostat.prototype.max = function() {
 };
 Thermostat.prototype._powersavingSwitch = function() {
   this._powersaving = !this._powersaving
+  if (this._temperature > 25) {
+    this._temperature = 25
+  }
 }
 Thermostat.prototype.reset = function(){
   this._temperature = 20
