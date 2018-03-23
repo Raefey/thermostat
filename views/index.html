@@ -81,7 +81,7 @@
       <script src="../src/thermostat.js"></script>
       <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
       <script src="../src/interface.js"></script>
-      <h1 id="temperature">20 °C</h1>
+      <h1 id="temperature">20°C</h1>
       <div id='allButtons'>
       <p>
         <button class='button' id="temperature-up">+</button>
@@ -97,7 +97,13 @@
 
         <div>
           <br>
-           <button class='button' id="get-weather">Weather</button>
+          <form>
+            <label for='city-select'>Input city here: </label>
+            <input id='city-select' name='city-select' type='text' value='London, uk'></input>
+            <br>
+            <br>
+             <button class='button' type='submit' id="get-weather">Weather</button>
+         </form>
         </div>
         <br>
         <br>
