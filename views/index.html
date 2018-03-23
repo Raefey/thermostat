@@ -74,6 +74,12 @@
       .slider.round:before {
          border-radius: 50%;
       }
+      #weather-info {
+        font-size: 30px;
+      }
+      #weather-city-selection, #city-select {
+        font-size: 20px;
+      }
     </style>
   </head>
   <body bgcolor="#F27370">
@@ -95,14 +101,14 @@
         Powersaving: On
         </div>
 
-        <div>
+        <div id='weather-city-selection'>
           <br>
           <form>
             <label for='city-select'>Input city here: </label>
             <input id='city-select' name='city-select' type='text' value='London, uk'></input>
             <br>
             <br>
-             <button class='button' type='submit' id="get-weather">Weather</button>
+             <button class='button' type='submit' id="get-weather">Get Weather</button>
          </form>
         </div>
         <br>
