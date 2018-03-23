@@ -56,7 +56,6 @@
          transform: translateX(26px);
       }
 
-      /* Rounded sliders */
       .slider.round {
          border-radius: 34px;
       }
@@ -75,10 +74,12 @@
         <button id="temperature-down">-</button>
         <button id="temperature-reset">reset</button>
         <label class="switch">
-          <input type="checkbox">
+          <input id="PSMswitch"type="checkbox" checked>
           <span class="slider round"></span>
         </label>
-        Powersaving
+        <div id='PSM'>
+        Powersaving: On
+      </div>
       </p>
     </div>
     </section>

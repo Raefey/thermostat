@@ -8,6 +8,12 @@ function Thermostat () {
 Thermostat.prototype.temperature = function() {
   return this._temperature;
 }
+Thermostat.prototype.powersaving = function() {
+  if (this._powersaving) {
+    return 'On'
+  }
+  return 'Off'
+};
 
 Thermostat.prototype.up = function() {
   if (this._temperature >= this.max()) { throw Error('Maximum temperature reached')}
