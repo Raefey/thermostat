@@ -67,6 +67,13 @@
   </head>
   <body>
     <section>
+      <script src="../src/thermostat.js"></script>
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="../src/interface.js"></script>
+      <script> $.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&', function(data){
+        console.log(data);
+      })
+      </script>
       <h1 id="temperature">20 °C</h1>
       <div id='allButtons'>
       <p>
@@ -83,8 +90,5 @@
       </p>
     </div>
     </section>
-    <script src="../src/thermostat.js"></script>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="../src/interface.js"></script>
   </body>
 </html>
