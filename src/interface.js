@@ -31,6 +31,11 @@ $( document ).ready(function() {
 
   function updateTemperatureDisplay(){
     $( "#temperature" ).text(thermostat.temperature() + '°C');
+    if (thermostat.temperature() < 18) {
+       $("body").css("background-color", "#ABEDD8")}
+    else if (thermostat.temperature() < 25) {
+       $("body").css("background-color", "#ECECEB")}
+    else { $("body").css("background-color", "#F27370")}
   }
   function updatePowersavingDisplay(){
     $( "#PSM" ).text('Powersaving: ' + thermostat.powersaving());
